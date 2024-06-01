@@ -5,7 +5,9 @@
 Библиотеки:
 
 -[pandas](https://pandas.pydata.org/)
+
 -[pyvis](https://pyvis.readthedocs.io/en/latest/)
+
 -[networkx](https://networkx.org/documentation/stable/index.html)
 
 # Структура проекта
