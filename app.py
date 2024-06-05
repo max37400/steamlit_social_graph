@@ -34,4 +34,4 @@ if filename and os.path.exists('./html_files/'+html):
    HtmlFile = open('./html_files/'+html, 'r', encoding='utf-8')
    source_code = HtmlFile.read() 
    components.html(source_code, height = 900,width=900,scrolling=True)
-   st.download_button(label='download graph',data = source_code, file_name='./html_files/'+html,mime='text/html')
+   st.download_button(label='download graph',data = source_code, file_name=html,mime='text/html')
