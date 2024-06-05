@@ -4,11 +4,15 @@
 
 Библиотеки:
 
+-[streamlit](https://streamlit.io/)
+
 -[pandas](https://pandas.pydata.org/)
 
 -[pyvis](https://pyvis.readthedocs.io/en/latest/)
 
 -[networkx](https://networkx.org/documentation/stable/index.html)
+
+-[matplotlib](https://matplotlib.org/)
 
 # Структура проекта
 
@@ -17,23 +21,15 @@
 ```
 steamlit_social_graph/
 │
-├── config/
-│   ├─── openai_client.py
-│   ├─── telegram_bot.py
-│   └─── tokens.py
-│
-├── handlers/
-│   ├── __init__.py
-│   ├── command_handlers.py
-│   └── message_handlers.py
+├── html_files/
 │
 ├── utils/
 │   ├── __init__.py
-│   └── helpers.py
+│   └── data_loader.py
 │
 ├── app.py
-├── Dockerfile
-├── Makefile
+├── Dockerfile (to be done)
+├── Makefile (to be done)
 └── requirements.txt
 ```
 

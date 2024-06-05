@@ -3,3 +3,5 @@ networkx
 pyvis
 matplotlib
 openpyxl
+mypy
+pylint

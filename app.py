@@ -11,7 +11,7 @@ from utils.data_loader import loader
 st.set_page_config('max37400')
 st.write("Привет!\nДанное приложение позволит тебе построить граф по входному файлу.")
 bias = st.number_input('Введите сумму, ниже которой не будет вестись учет транзакций',min_value=0,max_value=100000000,value=5000,help='введите число больше 0')
-html = st.text_input('Введите название для выходного html файла',value='example_name')
+html = st.text_input('Введите название для выходного html файла',value='test')
 html = html+'.html'
 st.write(f'Вы выбрали значение {bias}')
 st.write('## Загрузите файл с данными ниже')
@@ -24,10 +24,10 @@ if filename:
     elif filename.name.endswith('xlsx'):
        data = pd.read_excel(filename)
     st.dataframe(data)
-    loader(data,html)
+    loader(data,html,bias)
 #st.progress()
 
-if os.path.exists('./html_files/'+html):
+if filename and os.path.exists('./html_files/'+html):
    HtmlFile = open('./html_files/'+html, 'r', encoding='utf-8')
    source_code = HtmlFile.read() 
    components.html(source_code, height = 900,width=900,scrolling=True)
