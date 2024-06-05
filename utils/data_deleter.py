@@ -15,6 +15,6 @@ for file_name in os.listdir(folder_path):
     modified_time = datetime.datetime.fromtimestamp(os.path.getmtime(file_path))
     
     # Удаление файла, если он старше порогового времени
-    if modified_time < threshold abd file_path.endswith('html'):
+    if modified_time < threshold and file_path.endswith('html'):
         os.remove(file_path)
 print('Script was here!')
