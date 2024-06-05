@@ -1,5 +1,5 @@
 test.py
 .venv
 lib
-test.html
+**/*.html
 **/*.pyc

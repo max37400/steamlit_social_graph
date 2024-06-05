@@ -17,4 +17,4 @@ setup:
 # запуск приложения
 run:
 	@echo "Run app"
-	$(PYTHON_VENV) app.py
+	$(PYTHON_VENV) -m streamlit run app.py

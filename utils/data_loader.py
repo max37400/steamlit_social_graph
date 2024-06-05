@@ -6,7 +6,6 @@ from pyvis.network import Network
 
 def loader(data:pd.DataFrame,html_filename = 'test.html',bias = 5000): 
   data = data[['to','from','amount','ben_info','ord_info']]
-  data = pd.DataFrame({'to':['Mariko Frazier'],'from':['Warren Talley'],'amount':[16796],'ben_info':[np.nan],'ord_info':['a.felis@outlook.ca']})
   #data.fillna('-',inplace=True)
   data = data[data.amount>bias]
   data = data.groupby(['to','from','ben_info','ord_info'],as_index=False,dropna=False).agg(amount_sum=('amount','sum'),amount_count=('amount','count'))

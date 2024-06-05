@@ -24,7 +24,10 @@ if filename:
     elif filename.name.endswith('xlsx'):
        data = pd.read_excel(filename)
     st.dataframe(data)
-    loader(data,html,bias)
+    try:
+      loader(data,html,bias)
+    except KeyError:
+      st.write("Убедитесь, что файл содержит нужные колонки")
 #st.progress()
 
 if filename and os.path.exists('./html_files/'+html):
