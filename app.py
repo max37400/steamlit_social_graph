@@ -1,3 +1,4 @@
+"""The main script for streamlit application"""
 import os
 import streamlit as st
 import streamlit.components.v1 as components
@@ -20,14 +21,17 @@ if filename:
         data = pd.read_csv(filename)
     elif filename.name.endswith('xlsx'):
         data = pd.read_excel(filename)
-    st.dataframe(data)
+    else:
+        data = None# pylint: disable=C0103
+    #st.dataframe(data)
     try:
         loader(data,html,bias)
     except KeyError:
         st.write("Убедитесь, что файл содержит нужные колонки")
 
 if filename and os.path.exists('./html_files/'+html):
-    HtmlFile = open('./html_files/'+html, 'r', encoding='utf-8')
-    source_code = HtmlFile.read()
-    components.html(source_code, height = 900,width=900,scrolling=True)
-    st.download_button(label='download graph',data = source_code, file_name=html,mime='text/html')
+    with open('./html_files/'+html, 'r', encoding='utf-8') as HtmlFile:
+        source_code = HtmlFile.read()
+        components.html(source_code, height = 900,width=900,scrolling=True)
+        st.download_button(label='download graph',
+                           data = source_code, file_name=html,mime='text/html')
