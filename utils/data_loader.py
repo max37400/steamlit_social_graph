@@ -1,15 +1,15 @@
 import pandas as pd
 import numpy as np
-import networkx as nx
+import networkx as nx# type: ignore
 import matplotlib.pyplot as plt
-from pyvis.network import Network
+from pyvis.network import Network# type: ignore
 
 def loader(data:pd.DataFrame,html_filename = 'test.html',bias = 5000): 
   data = data[['to','from','amount','ben_info','ord_info']]
   #data.fillna('-',inplace=True)
   data = data[data.amount>bias]
   data = data.groupby(['to','from','ben_info','ord_info'],as_index=False,dropna=False).agg(amount_sum=('amount','sum'),amount_count=('amount','count'))
-  data.index = np.arange(0,data.shape[0])
+  data = data.reset_index(drop=True)
   graph = nx.from_pandas_edgelist(data,source='from',target='to',edge_key='amount',create_using=nx.DiGraph())
   from operator import itemgetter
   node_and_degree = graph.degree()
