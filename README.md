@@ -27,7 +27,8 @@ steamlit_social_graph/
 │
 ├── utils/
 │   ├── __init__.py
-│   └── data_loader.py
+│   ├── data_loader.py
+|   └── data_deleter.py
 │
 ├── app.py
 ├── Dockerfile (to be done)
