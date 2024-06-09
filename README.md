@@ -1,7 +1,5 @@
 # Предисловие по steamlit_social_graph
 
-![Build Status](https://github.com/max37400/steamlit_social_graph/actions/workflows/tests.yml/badge.svg)
-
 В данном репозитории планируется прототип приложения стримлит по анализу данных и отрисовке графа, предварительно, на транзакционных данных.
 
 Библиотеки:
