@@ -22,7 +22,7 @@ if filename:
     elif filename.name.endswith('xlsx'):
         data = pd.read_excel(filename)
     else:
-        data = None# pylint: disable=C0103
+        data = pd.DataFrame(columns=['to','from','amount','ben_info','ord_info'])# pylint: disable=C0103
     #st.dataframe(data)
     try:
         loader(data,html,bias)
