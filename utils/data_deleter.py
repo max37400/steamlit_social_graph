@@ -3,7 +3,7 @@ import os
 import datetime
 
 # Путь к папке, в которой нужно удалять старые файлы
-FOLDER_PATH = "/home/max37400/steamlit_social_graph/html_files"
+FOLDER_PATH = "./html_files"
 
 # Время, после которого файлы будут удалены (в данном случае 2 часа)
 threshold = datetime.datetime.now() - datetime.timedelta(hours=2)
