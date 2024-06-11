@@ -27,7 +27,7 @@ if filename:
     try:
         loader(data,html,bias)
     except KeyError:
-        st.write("Убедитесь, что файл содержит нужные колонки")
+        st.subheader(":red[Убедитесь, что файл содержит нужные колонки]")
 
 if filename and os.path.exists('./html_files/'+html):
     with open('./html_files/'+html, 'r', encoding='utf-8') as HtmlFile:
