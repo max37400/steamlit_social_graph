@@ -7,8 +7,10 @@ from utils.data_loader import loader
 
 st.set_page_config('max37400')
 st.write("Привет!\nДанное приложение позволит тебе построить граф по входному файлу.")
-bias = st.number_input('Введите сумму, ниже которой не будет вестись учет транзакций',
-                       min_value=0,max_value=100000000,value=5000,help='введите число больше 0')
+bias = int(
+    st.number_input('Введите сумму, ниже которой не будет вестись учет транзакций',\
+                    min_value=0,max_value=100000000,value=5000,help='введите число больше 0',step=1)
+                    )
 html = st.text_input('Введите название для выходного html файла',value='test')
 html = html+'.html'
 st.write(f'Вы выбрали значение {bias}')

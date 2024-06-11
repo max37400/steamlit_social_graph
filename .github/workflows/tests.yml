@@ -18,6 +18,6 @@ jobs:
                 pip install -r requirements.txt
                 python3 -m pip install pandas-stubs
             - name: Run pylint
-              run:  pylint app.py
+              run:  pylint **/*.py
             - name: Run mypy
               run: mypy .
