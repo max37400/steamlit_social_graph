@@ -22,7 +22,7 @@ run:
 # запуск приложения в Docker
 dockerrun:
 	@echo "Docker run"
-	sudo docker run -p 8501:8501 $(IMAGE)
+	sudo docker run -d -p 8501:8501 $(IMAGE)
 
 # сборка образа
 build:
