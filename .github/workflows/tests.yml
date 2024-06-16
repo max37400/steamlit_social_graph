@@ -2,7 +2,10 @@ name: Code checks
 
 on:
     push:
-        branches: [streamlit_app]
+        branches: [main, streamlit_app]
+    pull_request:
+        branches: [main, streamlit_app]
+        types: [closed]
 jobs:
     build:
         runs-on: ubuntu-latest

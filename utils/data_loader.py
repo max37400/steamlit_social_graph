@@ -4,7 +4,7 @@ import pandas as pd
 import networkx as nx# type: ignore
 from pyvis.network import Network# type: ignore
 
-def loader(data:pd.DataFrame,html_filename:str = 'test.html' ,bias:int = 5000):
+def transform_data_to_graph(data:pd.DataFrame,html_filename:str = 'test.html' ,bias:int = 5000):
     """data transform to build Net"""
     data = data[['to','from','amount','ben_info','ord_info']]
     #data.fillna('-',inplace=True)
