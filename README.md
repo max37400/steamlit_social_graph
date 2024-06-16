@@ -150,10 +150,10 @@ steamlit_social_graph/
    docker pull username/projectname:v1
    ```
 
-3. Запускаем контейнер с токенами Telegram бота и OpenAI API:
+3. Запускаем контейнер:
 
    ```
-   sudo docker run -p 8501:8501 username/projectname:v1
+   sudo docker run -d -p 8501:8501 username/projectname:v1
    ```
 
 4. Открываем страницу в вебе и пользуемся
