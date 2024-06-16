@@ -1,2 +1,5 @@
-test.py
 .venv
+lib
+**/*.html
+**/*.pyc
+nohup.out

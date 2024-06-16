@@ -1,0 +1,8 @@
+streamlit
+networkx
+pyvis
+matplotlib
+openpyxl
+mypy
+pylint
+pytest
