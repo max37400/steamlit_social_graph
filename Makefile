@@ -16,7 +16,7 @@ setup:
 
 # запуск приложения
 run:
-	@echo "Run app"
+	@echo "Run app locally"
 	$(PYTHON_VENV) -m streamlit run app.py
 
 # запуск приложения в Docker
